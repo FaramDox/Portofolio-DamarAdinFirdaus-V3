@@ -115,13 +115,11 @@
 
   /* ── HERO ── */
   #hero {
-    min-height: 100vh;
-    display: flex; align-items: center;
-    padding: 0 8%;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-  }
+      padding-top: 130px; 
+      padding-bottom: 60px;
+      min-height: auto; /* Menghapus paksaan agar tidak selalu sejajar tengah di layar pendek */
+      align-items: flex-start;
+    }
 
   .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; width: 100%; max-width: 1300px; margin: 0 auto; }
 
@@ -636,7 +634,7 @@ body {
     .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
     .hero-right { order: -1; } /* Memindahkan gambar ke atas di HP */
     .hero-avatar-wrap, .avatar-hex { width: 240px; height: 240px; }
-    .avatar-svg { width: 180px; height: 180px; }
+    .avatar-svg { width: 200px; height: 200px; }
     .hero-desc { margin: 0 auto 2rem; }
     .hero-actions { justify-content: center; }
     .float-badge { display: none; }
