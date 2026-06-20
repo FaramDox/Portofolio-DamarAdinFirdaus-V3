@@ -189,3 +189,34 @@ backToTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+// ── MODAL SERTIFIKAT ──
+const modal = document.getElementById("certModal");
+const modalImg = document.getElementById("certImage");
+const closeModal = document.querySelector(".close-modal");
+const certCards = document.querySelectorAll('.cert-card');
+
+// Buka modal dan tampilkan gambar saat kartu diklik
+certCards.forEach(card => {
+  card.addEventListener('click', function() {
+    const certSrc = this.getAttribute('data-cert');
+    if(certSrc && certSrc !== "") {
+      modalImg.src = certSrc;
+      modal.classList.add('show');
+    }
+  });
+});
+
+// Tutup modal saat tombol (X) diklik
+closeModal.addEventListener('click', () => {
+  modal.classList.remove('show');
+  setTimeout(() => modalImg.src = "", 300); // Bersihkan gambar setelah animasi selesai
+});
+
+// Tutup modal saat area kosong (di luar gambar) diklik
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('show');
+    setTimeout(() => modalImg.src = "", 300);
+  }
+});

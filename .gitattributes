@@ -1,2 +1,22 @@
-# Auto detect text files and perform LF normalization
+# 1. Set default behavior to automatically normalize line endings
 * text=auto
+
+# 2. Tentukan file kode/teks secara eksplisit
+*.html text
+*.css text
+*.js text
+*.md text
+*.json text
+
+# 3. Tentukan file gambar/media sebagai binary
+# (Penting agar Git tidak memodifikasi file ini dan membuatnya corrupt)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.mp4 binary
+
+# 4. File SVG adalah teks berbasis XML, jadi diperlakukan sebagai text
+*.svg text
