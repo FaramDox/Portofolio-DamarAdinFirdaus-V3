@@ -1,28 +1,3 @@
-// ── CURSOR ──
-const cursor = document.getElementById('cursor');
-const cursorRing = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
-
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cursor.style.left = mx + 'px';
-  cursor.style.top = my + 'px';
-});
-
-const animRing = () => {
-  rx += (mx - rx) * 0.12;
-  ry += (my - ry) * 0.12;
-  cursorRing.style.left = rx + 'px';
-  cursorRing.style.top = ry + 'px';
-  requestAnimationFrame(animRing);
-};
-animRing();
-
-document.querySelectorAll('a, button, .tech-card, .project-card, .stat-item').forEach(el => {
-  el.addEventListener('mouseenter', () => cursorRing.classList.add('expand'));
-  el.addEventListener('mouseleave', () => cursorRing.classList.remove('expand'));
-});
-
 // ── PARTICLES ──
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
@@ -195,3 +170,22 @@ function loadGoogleTranslate() {
 
 // 3. Panggil fungsinya
 loadGoogleTranslate();
+
+// ── BACK TO TOP BUTTON ──
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  // Tombol akan muncul setelah di-scroll sejauh 300px ke bawah
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
