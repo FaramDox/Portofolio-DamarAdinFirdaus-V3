@@ -2,7 +2,7 @@
 
 Website portofolio pribadi versi ke-3 yang dirancang untuk menampilkan profil, keahlian, pengalaman, dan proyek-proyek pengembangan web. Dibangun dengan antarmuka modern bertema *Cyberpunk/Neon Dark Mode*, animasi interaktif, dan performa yang sangat dioptimalkan.
 
-🌐 **[Lihat Live Demo di Sini] (https://github.com/FaramDox/Portofolio-DamarAdinFirdaus-V3)**
+🌐 **[Lihat Live Demo di Sini] (https://faramdox.github.io/Portofolio-DamarAdinFirdaus-V3/)**
 
 ---
 
